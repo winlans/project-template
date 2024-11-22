@@ -1,0 +1,8 @@
+plugins {
+    id 'buildlogic.java-application-conventions'
+    alias(libs.plugins.spring.boot)
+}
+
+dependencies {
+    libs.commons.lang3
+}
