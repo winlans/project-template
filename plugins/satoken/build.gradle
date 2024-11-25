@@ -1,0 +1,26 @@
+plugins {
+    id 'buildlogic.java-library-conventions'
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.depends)
+}
+
+ext {
+    springModulithVersion = "1.2.5"
+}
+
+dependencies {
+    implementation project(':common')
+    implementation project(':plugins:json')
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    // sa-token
+    implementation 'cn.dev33:sa-token-spring-boot3-starter:1.39.0'
+    implementation 'cn.dev33:sa-token-jwt:1.39.0'
+    implementation 'org.springframework.modulith:spring-modulith-starter-jpa'
+    testImplementation 'org.springframework.modulith:spring-modulith-starter-test'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.modulith:spring-modulith-bom:$springModulithVersion"
+    }
+}

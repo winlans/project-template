@@ -16,7 +16,13 @@ dependencies {
     constraints {
         // Define dependency versions as constraints
         implementation 'org.apache.commons:commons-text:1.12.0'
+        implementation 'cn.hutool:hutool-all:5.8.32'
     }
+
+    implementation 'cn.hutool:hutool-core:5.8.32'
+    implementation 'cn.hutool:hutool-extra:5.8.32'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
 
     // Use JUnit Jupiter for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/project-template.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/project-template.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/project-template.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/project-template.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugins/json/project-template.plugins.json.main.iml" filepath="$PROJECT_DIR$/.idea/modules/plugins/json/project-template.plugins.json.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugins/satoken/project-template.plugins.satoken.main.iml" filepath="$PROJECT_DIR$/.idea/modules/plugins/satoken/project-template.plugins.satoken.main.iml" />
+    </modules>
+  </component>
+</project>

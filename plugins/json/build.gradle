@@ -1,0 +1,13 @@
+plugins {
+    id 'buildlogic.java-application-conventions'
+}
+
+group = 'com.project.modules'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':common')
+}
