@@ -9,4 +9,6 @@ dependencies {
     api libs.commons.lang3
     api libs.spring.context
     api libs.jakarta.validation
+    api 'org.eclipse.collections:eclipse-collections-api:11.1.0'
+    api 'org.eclipse.collections:eclipse-collections:11.1.0'
 }
