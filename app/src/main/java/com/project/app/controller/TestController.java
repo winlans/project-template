@@ -1,5 +1,6 @@
 package com.project.app.controller;
 
+import cn.dev33.satoken.annotation.SaCheckLogin;
 import com.project.app.config.Create;
 import com.project.app.config.Update;
 import com.project.app.entity.User;
@@ -20,6 +21,7 @@ public class TestController {
     private final Users users;
 
     @PostMapping("/user/create")
+    @SaCheckLogin
     public R<Void> create(@Validated(Create.class) @RequestBody UserBo bo) {
         return R.ok();
     }

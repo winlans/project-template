@@ -6,7 +6,7 @@ import com.project.common.utils.ValidatorUtils;
 import com.project.modules.satoken.domain.model.LoginBody;
 import com.project.modules.satoken.domain.vo.LoginVo;
 import com.project.modules.satoken.repository.SaTokenRepository;
-import com.project.modules.satoken.service.IAuthStrategy;
+import com.project.modules.satoken.service.AuthStrategy;
 import lombok.RequiredArgsConstructor;
 import org.dromara.common.json.utils.JsonUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,7 +36,7 @@ public class AuthController {
         String clientType = loginBody.getClientType();
         String grantType = loginBody.getGrantType();
 
-        LoginVo loginVo = IAuthStrategy.login(body, clientType, grantType);
+        LoginVo loginVo = AuthStrategy.login(body, clientType, grantType);
         return R.ok(loginVo);
     }
 

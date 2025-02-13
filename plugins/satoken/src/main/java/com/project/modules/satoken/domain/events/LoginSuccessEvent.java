@@ -4,11 +4,10 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
-import org.jmolecules.event.types.DomainEvent;
 
 @Value
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
-public class LoginSuccessEvent implements DomainEvent {
+public class LoginSuccessEvent {
     String userId;
 }

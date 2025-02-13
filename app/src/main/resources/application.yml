@@ -6,5 +6,12 @@ spring:
     url: jdbc:mysql://localhost:3306/ry-config?tinyInt1isBit=false&useSSL=false&useUnicode=true&characterEncoding=UTF-8&useAffectedRows=true&zeroDateTimeBehavior=convertToNull
     username: root
     password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
   jpa:
     show-sql: true
+    database: mysql
+
+app:
+  security:
+    excludes: '/user/**'

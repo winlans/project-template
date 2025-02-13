@@ -9,9 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.dromara.common.json.utils.JsonUtils;
 import org.springframework.stereotype.Component;
 
-@Component("password" + IAuthStrategy.BASE_NAME)
+@Component("password")
 @RequiredArgsConstructor
-public class PasswordAuthStrategyImpl implements IAuthStrategy {
+public class PasswordAuthStrategy implements AuthStrategy {
     private final SaTokenRepository saTokenRepository;
 
     @Override

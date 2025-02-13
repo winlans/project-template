@@ -1,13 +1,18 @@
 package com.project.app.entity;
 
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import io.hypersistence.utils.hibernate.type.json.JsonStringType;
+import io.hypersistence.utils.hibernate.type.json.JsonType;
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.eclipse.collections.api.list.ImmutableList;
+import org.eclipse.collections.api.list.MutableList;
+import org.hibernate.annotations.Type;
+import org.hibernate.type.descriptor.jdbc.JsonAsStringJdbcType;
+import org.springframework.beans.factory.config.TypedStringValue;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 @Entity
 @Table(name = "sys_user")
@@ -22,9 +27,7 @@ public class User {
     private Long deptId;
     @Getter
     private String email;
-    @Embedded
     @Getter
-    private ImmutableList<String> updateBy;
-
-
+    @Type(JsonType.class)
+    private List<String> updateBy;
 }

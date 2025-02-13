@@ -8,11 +8,9 @@ import com.project.modules.satoken.domain.vo.LoginVo;
 import com.project.modules.satoken.domain.vo.SaTokenUser;
 import org.springframework.context.ApplicationEventPublisher;
 
-public interface IAuthStrategy {
-    String BASE_NAME = "AuthStrategy";
-
+public interface AuthStrategy {
     static LoginVo login(String body, String clientType, String grantType) {
-        IAuthStrategy strategy = SpringUtils.getBean(grantType + BASE_NAME, IAuthStrategy.class);
+        AuthStrategy strategy = SpringUtils.getBean(grantType, AuthStrategy.class);
         ApplicationEventPublisher events = SpringUtils.getBean(ApplicationEventPublisher.class);
         R<SaTokenUser> result = strategy.login(body);
         if (result.isSuccess()) {
